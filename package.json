@@ -15,10 +15,10 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wedeho/capacitor-sunmi-broadcast.git"
+    "url": "git@github.com:deStrO/capacitor-sunmi-broadcast.git"
   },
   "bugs": {
-    "url": "https://github.com/wedeho/capacitor-sunmi-broadcast/issues"
+    "url": "https://github.com/deStrO/capacitor-sunmi-broadcast/issues"
   },
   "keywords": [
     "capacitor",

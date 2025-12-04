@@ -1,10 +1,6 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { SunmiBroadcastPlugin } from './definitions';
+import type { SunmiBroadcastPlugin } from './index';
 
 export class SunmiBroadcastWeb extends WebPlugin implements SunmiBroadcastPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
-  }
 }

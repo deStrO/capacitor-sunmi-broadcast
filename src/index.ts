@@ -1,10 +1,17 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { SunmiBroadcastPlugin } from './definitions';
+export interface SunmiPayload {
+  action: string;
+  data?: string;
+  source_byte_base64?: string;
+  [k: string]: any;
+}
 
-const SunmiBroadcast = registerPlugin<SunmiBroadcastPlugin>('SunmiBroadcast', {
-  web: () => import('./web').then((m) => new m.SunmiBroadcastWeb()),
-});
+export interface SunmiBroadcastPlugin {
+  addListener(
+    eventName: 'sunmiScan',
+    listener: (payload: SunmiPayload) => void
+  ): Promise<{ remove: () => void }>;
+}
 
-export * from './definitions';
-export { SunmiBroadcast };
+export const SunmiBroadcast = registerPlugin<SunmiBroadcastPlugin>('SunmiBroadcast');
